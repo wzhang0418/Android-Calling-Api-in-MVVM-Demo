@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="item"
+            type="com.apolis.wenzhao.interviewmock.model.EpisodeData"/>
+        <variable
+            name="adapter"
+            type="com.apolis.wenzhao.interviewmock.adapter.AdapterRecyclerView" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Id"
+            android:text="@{item.id}"
+            android:textSize="32dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_id"
+            tools:text="Name"
+            android:text="@{item.name}"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/text_view_episode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_name"
+            tools:text="Episode"
+            android:text="@{item.episode}"
+            android:textSize="32dp" />
+
+    </RelativeLayout>
+
+</layout>
